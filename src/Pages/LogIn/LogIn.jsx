@@ -1,7 +1,11 @@
-
+import Swal from 'sweetalert2'
 import { Link } from 'react-router-dom';
 import NavBar from './../Shared/NavBar/NavBar';
+import { useContext } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
 const LogIn = () => {
+
+    const {logInUser, googleLogIn } = useContext(AuthContext)
 
     const handleLogIn = e => {
         e.preventDefault();
@@ -10,22 +14,31 @@ const LogIn = () => {
         const password = e.target.password.value
         console.log(email, password)
 
-        // //promice for get login value 
-        // logInUser(email, password)
-        //     .then(user => {
-        //         console.log(user)
-        //         return (
-        //             // alert("successfully Log In"),
-        //             toast.success("successfully logIn"),
-        //             e.target.reset(),
-        //             navigate('/')
-        //         );
-        //     })
-        //     .catch(error => {
-        //         setLogInError(error.message)
-        //         return toast.error(logInError)
-        //         // alert(logInError)
-        //     })
+        //promice for get login value 
+        logInUser(email, password)
+            .then(result => {
+                console.log(result)
+                return (
+                    Swal.fire(
+                        'LogIn Successfully!'
+                      )
+                )
+                
+            })
+            .catch(error => {
+                console.log(error)
+
+            })
+    }
+
+    const handleGoogle = () => {
+        googleLogIn()
+            .then(result => {
+                return (
+                    console.log(result.user)
+                )
+            })
+            .catch(error => console.log(error))
     }
 
 
@@ -71,8 +84,8 @@ const LogIn = () => {
                             </button>
                             <div className='flex justify-center items-center my-4 text-2xl text-[#474f85]'><p>OR</p></div>
                             <div className='flex justify-center items-center'>
-                                {/* onClick={handleGoogle} */}
                                 <button
+                                    onClick={handleGoogle}
                                     className="w-full py-3 border-2 border-[#66bfbf] text-black"
                                     type="submit"
                                     data-ripple-light="true"

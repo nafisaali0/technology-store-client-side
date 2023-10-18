@@ -6,12 +6,14 @@ import Register from './../Pages/Register/Register';
 import MyCart from "../Pages/MyCart/MyCart";
 import ProductDetails from './../Pages/ProductDetails/ProductDetails';
 import AddProduct from "../Pages/AddProduct/AddProduct";
+import ErrorPage from './../Pages/ErrorPage/ErrorPage';
+import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
-        // errorElement: <ErrorPage></ErrorPage>,
+        errorElement: <ErrorPage></ErrorPage>,
         children:
             [
                 {
@@ -29,6 +31,10 @@ const router = createBrowserRouter([
                 {
                     path: '/addProduct',
                     element: <AddProduct></AddProduct>
+                },
+                {
+                    path: '/updateProduct',
+                    element: <UpdateProduct></UpdateProduct>
                 },
                 {
                     path: '/myCart',

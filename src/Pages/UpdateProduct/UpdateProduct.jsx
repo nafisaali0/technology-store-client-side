@@ -2,9 +2,10 @@
 import NavBar from './../Shared/NavBar/NavBar';
 import Footer from './../Shared/Footer/Footer';
 
-const AddProduct = () => {
 
-    const handleAddProduct = event => {
+const UpdateProduct = () => {
+
+    const handleUpdateProduct = event => {
 
         event.preventDefault();
 
@@ -15,12 +16,11 @@ const AddProduct = () => {
         const photo = form.photo.value
         const quantity = form.quantity.value
 
-        const newCoffeeInfo = { title, taste, quantity, photo, }
-        console.log(newCoffeeInfo)
+        const updateCoffeeInfo = { title, taste, quantity, photo, }
+        console.log(updateCoffeeInfo)
+
 
     }
-
-
     return (
         <>
             <NavBar></NavBar>
@@ -28,9 +28,10 @@ const AddProduct = () => {
             <div className="container mx-auto my-44 bg-[#F4F3F0]">
                 <div className="p-10">
                     <div className="text-center text-2xl font-bold my-7">
-                        <h2>Add New Product</h2>
+                        <h2>Update Product</h2>
                     </div>
-                    <form onSubmit={handleAddProduct}>
+                    <form onSubmit={handleUpdateProduct}>
+                        {/* defaultValue={photo} */}
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                             <input type="link" name="photo" placeholder="photo URL" className="input input-bordered w-full" />
                             <input type="text" name="name" placeholder="Name" className="input input-bordered w-full" />
@@ -41,7 +42,7 @@ const AddProduct = () => {
                         </div>
                         <div>
                             <textarea type="text" name="description" className="textarea textarea-bordered textarea-xs w-full mt-5" placeholder="Short Description"></textarea>
-                            <input type="submit" value="Add Product" className="btn btn-block bg-[#D2B48C] my-10" />
+                            <input type="submit" value="Update Product" className="btn btn-block bg-[#D2B48C] my-10" />
                         </div>
                     </form>
                 </div>
@@ -53,8 +54,8 @@ const AddProduct = () => {
     );
 };
 
-// AddProduct.propTypes = {
+// UpdateProduct.propTypes = {
 
 // };
 
-export default AddProduct;
+export default UpdateProduct;

@@ -1,8 +1,13 @@
+import Swal from 'sweetalert2'
+import { useContext } from "react";
 import NavBar from "../Shared/NavBar/NavBar";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
+
 
 
 const Register = () => {
+    const { registerUser } = useContext(AuthContext)
 
     const handleRegister = e => {
         e.preventDefault();
@@ -11,6 +16,20 @@ const Register = () => {
         const password = e.target.password.value
 
         console.log(email, password)
+
+
+        registerUser(email, password)
+            .then(result => {
+                return (
+                    console.log(result.user),
+                    Swal.fire(
+                        'Register Successfully!'
+                      )
+                )
+            })
+            .catch(error => {
+                console.log(error)
+            })
 
     }
 
