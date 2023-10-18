@@ -1,19 +1,22 @@
 import Swal from 'sweetalert2'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import NavBar from './../Shared/NavBar/NavBar';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 const LogIn = () => {
 
     const { logInUser, googleLogIn } = useContext(AuthContext)
-    const [logInError , setLogInError] = useState()
+    const [logInError, setLogInError] = useState('')
+    const navigate = useNavigate()
 
     const handleLogIn = e => {
         e.preventDefault();
 
         const email = e.target.email.value
         const password = e.target.password.value
-        console.log(email, password)
+        // console.log(email, password)
+
+        setLogInError('')
 
         //apply promice to login with email/pass auth
         logInUser(email, password)
@@ -21,8 +24,10 @@ const LogIn = () => {
                 console.log(result)
                 return (
                     Swal.fire(
-                        'LogIn Successfully!'
-                    )
+                        'Login Successfully!'
+                    ),
+                    e.target.reset(),
+                    navigate('/')
                 )
 
             })
@@ -33,10 +38,9 @@ const LogIn = () => {
                     Swal.fire({
                         icon: 'error',
                         title: 'Try Again',
-                        text: 'Can Not LogIn With Google',
+                        text: 'Can Not LogIn',
                         footer: (logInError)
-                    }),
-                    e.target.reset()
+                    })
                 )
 
             })
@@ -48,8 +52,9 @@ const LogIn = () => {
                 return (
                     console.log(result.user),
                     Swal.fire(
-                        'LogIn Successfully!'
-                    )
+                        'Login Successfully!'
+                    ),
+                    navigate('/')
                 )
             })
             .catch(error => {
@@ -59,7 +64,7 @@ const LogIn = () => {
                         icon: 'error',
                         title: 'Try Again',
                         text: 'Can Not LogIn With Google',
-                        footer: {error}
+                        footer: { error }
                     })
                 )
             })

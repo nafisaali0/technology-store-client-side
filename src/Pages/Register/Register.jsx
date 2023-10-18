@@ -1,13 +1,17 @@
 import Swal from 'sweetalert2'
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import NavBar from "../Shared/NavBar/NavBar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 
 
 const Register = () => {
-    const { registerUser } = useContext(AuthContext)
+
+    const { registerUser} = useContext(AuthContext)
+    const [registerError, setRegisterError] = useState('')
+    const passwordRequirement = /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\-]).{6,}$/;
+    const navigate = useNavigate()
 
     const handleRegister = e => {
         e.preventDefault();
@@ -15,20 +19,40 @@ const Register = () => {
         const email = e.target.email.value
         const password = e.target.password.value
 
-        console.log(email, password)
-
-
+        // console.log(email, password)
+        
+        setRegisterError('')//clean error state
+        
+        // grap error before data going to server
+        if (!passwordRequirement.test(password)) {
+            setRegisterError('Your password should be capital letter, regular expression and length would be 6')
+            return Swal.fire({
+                icon: 'error',
+                title: (registerError),
+                text: 'Can Not Register',
+            })
+        }
         registerUser(email, password)
             .then(result => {
                 return (
                     console.log(result.user),
                     Swal.fire(
                         'Register Successfully!'
-                      )
+                    ),
+                    e.target.reset(),
+                    navigate('/')
                 )
             })
             .catch(error => {
                 console.log(error)
+                return (
+                    setRegisterError(error.message),
+                    Swal.fire({
+                        icon: 'error',
+                        title: (registerError),
+                        text: 'Can Not Register',
+                    })
+                )
             })
 
     }

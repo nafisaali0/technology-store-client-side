@@ -2,18 +2,19 @@ import { Link, NavLink } from "react-router-dom";
 import logo from '../../../assets/logo2-removebg.png';
 import users from '../../../assets/logo2.jpg'
 import './navbar.css'
-import { useContext} from "react";
+import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import Loader from './../Loader/Loader';
 
 const NavBar = () => {
 
     const { user, logOut, loading } = useContext(AuthContext)
-    
-    if(loading){
+
+    if (loading) {
         return <Loader></Loader>
     }
-
+    
+    // user logOut
     const handleLogOut = () => {
         logOut(user)
             .then(removeUser => {
