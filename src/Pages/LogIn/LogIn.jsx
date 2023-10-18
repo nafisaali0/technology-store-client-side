@@ -1,11 +1,12 @@
 import Swal from 'sweetalert2'
 import { Link } from 'react-router-dom';
 import NavBar from './../Shared/NavBar/NavBar';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 const LogIn = () => {
 
-    const {logInUser, googleLogIn } = useContext(AuthContext)
+    const { logInUser, googleLogIn } = useContext(AuthContext)
+    const [logInError , setLogInError] = useState()
 
     const handleLogIn = e => {
         e.preventDefault();
@@ -14,19 +15,29 @@ const LogIn = () => {
         const password = e.target.password.value
         console.log(email, password)
 
-        //promice for get login value 
+        //apply promice to login with email/pass auth
         logInUser(email, password)
             .then(result => {
                 console.log(result)
                 return (
                     Swal.fire(
                         'LogIn Successfully!'
-                      )
+                    )
                 )
-                
+
             })
             .catch(error => {
                 console.log(error)
+                setLogInError(error.message)
+                return (
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Try Again',
+                        text: 'Can Not LogIn With Google',
+                        footer: (logInError)
+                    }),
+                    e.target.reset()
+                )
 
             })
     }
@@ -35,10 +46,23 @@ const LogIn = () => {
         googleLogIn()
             .then(result => {
                 return (
-                    console.log(result.user)
+                    console.log(result.user),
+                    Swal.fire(
+                        'LogIn Successfully!'
+                    )
                 )
             })
-            .catch(error => console.log(error))
+            .catch(error => {
+                console.log(error)
+                return (
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Try Again',
+                        text: 'Can Not LogIn With Google',
+                        footer: {error}
+                    })
+                )
+            })
     }
 
 
