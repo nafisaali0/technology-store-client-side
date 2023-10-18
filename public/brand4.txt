@@ -1,0 +1,42 @@
+[
+  {
+    "id": 13,
+    "productType": "Phone",
+    "name": "iPhone 13 Pro",
+    "brand": "Apple",
+    "price": 999.99,
+    "rating": 4.7,
+    "image": "https://i.postimg.cc/bNMHW5Jn/brand4a.png",
+    "description": "The iPhone 13 Pro is a premium smartphone with a 4.7-star rating."
+  },
+  {
+    "id": 14,
+    "productType": "Monitor",
+    "name": "Apple Pro Display XDR",
+    "brand": "Apple",
+    "price": 4999.99,
+    "rating": 4.8,
+    "image": "https://i.postimg.cc/nzRQ7s9m/brand4b.png",
+    "description": "The Apple Pro Display XDR is a high-end professional monitor with a 4.8-star rating."
+  },
+  {
+    "id": 15,
+    "productType": "Watch",
+    "name": "Apple Watch Series 7",
+    "brand": "Apple",
+    "price": 349.99,
+    "rating": 4.6,
+    "image": "https://i.postimg.cc/J0sHQ1j2/brand4c.png",
+    "description": "The Apple Watch Series 7 is a versatile smartwatch with a 4.6-star rating."
+  },
+  {
+    "id": 16,
+    "productType": "TWS",
+    "name": "AirPods Pro",
+    "brand": "Apple",
+    "price": 249.99,
+    "rating": 4.9,
+    "image": "https://i.postimg.cc/Ghss8mLB/brand4d.png",
+    "description": "The AirPods Pro are premium true wireless earbuds with a 4.9-star rating."
+  }
+]

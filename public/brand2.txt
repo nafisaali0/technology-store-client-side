@@ -1,0 +1,42 @@
+[
+  {
+    "id": 5,
+    "productType": "Phone",
+    "name": "Xiaomi Mi 11",
+    "brand": "Xiaomi",
+    "price": 699.99,
+    "rating": 4.4,
+    "image": "https://i.postimg.cc/8cQ6p22J/brand2a.png",
+    "description": "The Xiaomi Mi 11 is a flagship smartphone with a 4.4-star rating."
+  },
+  {
+    "id": 6,
+    "productType": "Monitor",
+    "name": "Xiaomi 32-inch Gaming Monitor",
+    "brand": "Xiaomi",
+    "price": 299.99,
+    "rating": 4.2,
+    "image": "https://i.postimg.cc/HLrcQWH8/brand2b.webp",
+    "description": "The Xiaomi 32-inch Gaming Monitor offers an immersive gaming experience with a 4.2-star rating."
+  },
+  {
+    "id": 7,
+    "productType": "Watch",
+    "name": "Xiaomi Mi Watch Lite",
+    "brand": "Xiaomi",
+    "price": 99.99,
+    "rating": 4.1,
+    "image": "https://i.postimg.cc/BnKfDRkQ/brand2c.webp",
+    "description": "The Xiaomi Mi Watch Lite is a budget-friendly smartwatch with a 4.1-star rating."
+  },
+  {
+    "id": 8,
+    "productType": "TWS",
+    "name": "Xiaomi Redmi AirDots",
+    "brand": "Xiaomi",
+    "price": 39.99,
+    "rating": 4.0,
+    "image": "https://i.postimg.cc/vBGJJTBc/brand2d.webp",
+    "description": "The Xiaomi Redmi AirDots are affordable true wireless earbuds with a 4.0-star rating."
+  }
+]

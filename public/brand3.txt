@@ -1,0 +1,42 @@
+[
+  {
+    "id": 9,
+    "productType": "Phone",
+    "name": "Google Pixel 6",
+    "brand": "Google",
+    "price": 799.99,
+    "rating": 4.6,
+    "image": "https://i.postimg.cc/63YpSD9x/brand3a.webp",
+    "description": "The Google Pixel 6 is a flagship smartphone with a 4.6-star rating."
+  },
+  {
+    "id": 10,
+    "productType": "Monitor",
+    "name": "Google Nest Hub",
+    "brand": "Google",
+    "price": 149.99,
+    "rating": 4.3,
+    "image": "https://i.postimg.cc/SQ1KGFTW/brand3b.webp",
+    "description": "The Google Nest Hub is a smart display with a 4.3-star rating."
+  },
+  {
+    "id": 11,
+    "productType": "Watch",
+    "name": "Google Pixel Watch",
+    "brand": "Google",
+    "price": 249.99,
+    "rating": 4.5,
+    "image": "https://i.postimg.cc/NjmfYyg4/brand3c.webp",
+    "description": "The Google Pixel Watch is a feature-packed smartwatch with a 4.5-star rating."
+  },
+  {
+    "id": 12,
+    "productType": "TWS",
+    "name": "Google Pixel Buds",
+    "brand": "Google",
+    "price": 179.99,
+    "rating": 4.4,
+    "image": "https://i.postimg.cc/RFsvGKRM/brand3d.webp",
+    "description": "The Google Pixel Buds are high-quality true wireless earbuds with a 4.4-star rating."
+  }
+]

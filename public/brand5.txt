@@ -1,0 +1,42 @@
+[
+  {
+    "id": 17,
+    "productType": "Phone",
+    "name": "Huawei P50 Pro",
+    "brand": "Huawei",
+    "price": 799.99,
+    "rating": 4.5,
+    "image": "https://i.postimg.cc/sX7gfv9y/brand5a.jpg",
+    "description": "The Huawei P50 Pro is a high-end smartphone with a 4.5-star rating."
+  },
+  {
+    "id": 18,
+    "productType": "Monitor",
+    "name": "Huawei MateView",
+    "brand": "Huawei",
+    "price": 399.99,
+    "rating": 4.4,
+    "image": "https://i.postimg.cc/D05FmsWV/brand5b.jpg",
+    "description": "The Huawei MateView is a sleek monitor with a 4.4-star rating."
+  },
+  {
+    "id": 19,
+    "productType": "Watch",
+    "name": "Huawei Watch GT 3",
+    "brand": "Huawei",
+    "price": 199.99,
+    "rating": 4.3,
+    "image": "https://i.postimg.cc/T3BxyTPP/brand5c.jpg",
+    "description": "The Huawei Watch GT 3 is a fitness-focused smartwatch with a 4.3-star rating."
+  },
+  {
+    "id": 20,
+    "productType": "TWS",
+    "name": "Huawei FreeBuds Pro",
+    "brand": "Huawei",
+    "price": 149.99,
+    "rating": 4.6,
+    "image": "https://i.postimg.cc/VNyyf47r/brand5d.jpg",
+    "description": "The Huawei FreeBuds Pro are noise-canceling true wireless earbuds with a 4.6-star rating."
+  }
+]
