@@ -4,9 +4,7 @@ import logo from '../../../assets/logo2-removebg.png'
 const Footer = () => {
     return (
         <>
-            <footer className="footer p-10 bg-gray-800 text-base-content overflow-hidden"
-                data-aos="fade-up"
-                data-aos-duration="3000">
+            <footer className="footer p-10 bg-gray-800 text-base-content overflow-hidden">
                 <div className='container mx-auto grid gap-3 grid-cols-1 md:grid-cols-3 '>
                     <aside>
                         <img className='w-40 h-40' src={logo} alt="" />
