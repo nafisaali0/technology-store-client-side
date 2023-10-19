@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import Swal from 'sweetalert2'
 import NavBar from './../Shared/NavBar/NavBar';
 import Footer from './../Shared/Footer/Footer';
 
@@ -10,14 +10,34 @@ const AddProduct = () => {
 
         const form = event.target;
 
-        const title = form.title.value
-        const taste = form.taste.value
         const photo = form.photo.value
-        const quantity = form.quantity.value
+        const name = form.name.value
+        const brand = form.brand.value
+        const type = form.type.value
+        const price = form.price.value
+        const rating = form.rating.value
 
-        const newCoffeeInfo = { title, taste, quantity, photo, }
-        console.log(newCoffeeInfo)
+        const newProductInfo = { photo, name, brand, type, price, rating }
+        console.log(newProductInfo)
 
+        //send data to the server
+        fetch('http://localhost:5000/product', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newProductInfo)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if(data.insertedId){
+                    // alert("Added New Product")
+                    Swal.fire(
+                        'Added New Product'
+                    )
+                }
+            })
     }
 
 
@@ -35,9 +55,9 @@ const AddProduct = () => {
                             <input type="link" name="photo" placeholder="photo URL" className="input input-bordered w-full" />
                             <input type="text" name="name" placeholder="Name" className="input input-bordered w-full" />
                             <input type="text" name="brand" placeholder="Brand Name" className="input input-bordered w-full " />
-                            <input type="number" name="type" placeholder="Type" className="input input-bordered w-full" />
-                            <input type="number" name="price" placeholder="Price" className="input input-bordered w-full" />
-                            <input type="number" name="Rating" placeholder="Rating" className="input input-bordered w-full" />
+                            <input type="text" name="type" placeholder="Type" className="input input-bordered w-full" />
+                            <input type="text" name="price" placeholder="Price" className="input input-bordered w-full" />
+                            <input type="text" name="rating" placeholder="Rating" className="input input-bordered w-full" />
                         </div>
                         <div>
                             <textarea type="text" name="description" className="textarea textarea-bordered textarea-xs w-full mt-5" placeholder="Short Description"></textarea>
