@@ -44,7 +44,7 @@ const UpdateProduct = () => {
             confirmButtonText: 'Yes, update it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/product/id/${_id}`, {
+                fetch(`https://technology-store-server-side.vercel.app/product/id/${_id}`, {
                     method: 'PUT',
                     headers: {
                         'content-type': 'application/json'

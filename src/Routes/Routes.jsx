@@ -36,22 +36,22 @@ const router = createBrowserRouter([
                 },
                 {
                     path: '/products/:brand',
-                    loader: ({ params }) => fetch(`http://localhost:5000/product/${params.brand}`),
+                    loader: ({ params }) => fetch(`https://technology-store-server-side.vercel.app/product/${params.brand}`),
                     element: <Products></Products>
                 },
                 {
                     path: '/productDetails/id/:id',
-                    loader: ({ params }) => fetch(`http://localhost:5000/product/id/${params.id}`),
+                    loader: ({ params }) => fetch(`https://technology-store-server-side.vercel.app/product/id/${params.id}`),
                     element:<PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>
                 },
                 {
                     path: '/updateProduct/id/:id',
-                    loader: ({ params }) => fetch(`http://localhost:5000/product/id/${params.id}`),
+                    loader: ({ params }) => fetch(`https://technology-store-server-side.vercel.app/product/id/${params.id}`),
                     element:<PrivateRoutes><UpdateProduct></UpdateProduct></PrivateRoutes> 
                 },
                 {
                     path: '/myCart',
-                    loader: () => fetch('http://localhost:5000/cart'),
+                    loader: () => fetch('https://technology-store-server-side.vercel.app/cart'),
                     element: <PrivateRoutes><MyCart></MyCart></PrivateRoutes>
                 },
 

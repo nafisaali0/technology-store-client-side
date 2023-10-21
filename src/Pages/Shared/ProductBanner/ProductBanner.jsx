@@ -18,7 +18,7 @@ const ProductBanner = () => {
     const [products, setProducts] = useState([]); //store all products using api 
 
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://technology-store-server-side.vercel.app/product')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

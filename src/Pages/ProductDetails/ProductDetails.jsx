@@ -20,7 +20,7 @@ const ProductDetails = () => {
     const handleCart = () => {
 
         //send data to the server and below link from backend's created API and load in mongo as DB
-        fetch('http://localhost:5000/cart', {
+        fetch('https://technology-store-server-side.vercel.app/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
