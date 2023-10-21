@@ -3,12 +3,13 @@ import Root from './../LayOut/Root';
 import Home from "../Pages/Home/Home";
 import LogIn from './../Pages/LogIn/LogIn';
 import Register from './../Pages/Register/Register';
-import MyCart from "../Pages/MyCart/MyCart";
 import ProductDetails from './../Pages/ProductDetails/ProductDetails';
 import AddProduct from "../Pages/AddProduct/AddProduct";
 import ErrorPage from './../Pages/ErrorPage/ErrorPage';
-import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 import PrivateRoutes from "./PrivateRoutes";
+import Products from "../Pages/Products/Products";
+import MyCart from './../Pages/MyCart/MyCart';
+import UpdateProduct from './../Pages/UpdateProduct/UpdateProduct';
 
 const router = createBrowserRouter([
     {
@@ -31,20 +32,29 @@ const router = createBrowserRouter([
                 },
                 {
                     path: '/addProduct',
-                    element:<PrivateRoutes><AddProduct></AddProduct></PrivateRoutes>   
+                    element: <PrivateRoutes><AddProduct></AddProduct></PrivateRoutes>
                 },
                 {
-                    path: '/updateProduct',
-                    element: <UpdateProduct></UpdateProduct>
+                    path: '/products/:brand',
+                    loader: ({ params }) => fetch(`http://localhost:5000/product/${params.brand}`),
+                    element: <Products></Products>
+                },
+                {
+                    path: '/productDetails/id/:id',
+                    loader: ({ params }) => fetch(`http://localhost:5000/product/id/${params.id}`),
+                    element:<PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>
+                },
+                {
+                    path: '/updateProduct/id/:id',
+                    loader: ({ params }) => fetch(`http://localhost:5000/product/id/${params.id}`),
+                    element:<PrivateRoutes><UpdateProduct></UpdateProduct></PrivateRoutes> 
                 },
                 {
                     path: '/myCart',
-                    element: <MyCart></MyCart>
+                    loader: () => fetch('http://localhost:5000/cart'),
+                    element: <PrivateRoutes><MyCart></MyCart></PrivateRoutes>
                 },
-                {
-                    path: '/productDetails/:id',
-                    element: <ProductDetails></ProductDetails>
-                }
+
 
             ]
     },

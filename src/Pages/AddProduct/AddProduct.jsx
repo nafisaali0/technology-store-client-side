@@ -16,8 +16,9 @@ const AddProduct = () => {
         const type = form.type.value
         const price = form.price.value
         const rating = form.rating.value
+        const description = form.description.value
 
-        const newProductInfo = { photo, name, brand, type, price, rating }
+        const newProductInfo = { photo, name, brand, type, price, rating, description }
         console.log(newProductInfo)
 
         //send data to the server
@@ -26,13 +27,12 @@ const AddProduct = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(newProductInfo)
+            body:JSON.stringify(newProductInfo)
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if(data.insertedId){
-                    // alert("Added New Product")
+                if (data.insertedId) {
                     Swal.fire(
                         'Added New Product'
                     )
@@ -47,7 +47,7 @@ const AddProduct = () => {
 
             <div className="container mx-auto my-44 bg-[#F4F3F0]">
                 <div className="p-10">
-                    <div className="text-center text-2xl font-bold my-7">
+                    <div className="text-center text-[#c67700] text-2xl font-bold my-7">
                         <h2>Add New Product</h2>
                     </div>
                     <form onSubmit={handleAddProduct}>
@@ -61,7 +61,7 @@ const AddProduct = () => {
                         </div>
                         <div>
                             <textarea type="text" name="description" className="textarea textarea-bordered textarea-xs w-full mt-5" placeholder="Short Description"></textarea>
-                            <input type="submit" value="Add Product" className="btn btn-block bg-[#D2B48C] my-10" />
+                            <input type="submit" value="Add Product" className="btn btn-block bg-[#c67700] text-white my-10" />
                         </div>
                     </form>
                 </div>

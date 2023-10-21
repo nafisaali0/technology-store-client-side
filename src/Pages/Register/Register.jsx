@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import NavBar from "../Shared/NavBar/NavBar";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Footer from '../Shared/Footer/Footer';
 
 
 
@@ -68,10 +69,10 @@ const Register = () => {
                 {/* form */}
                 <div className="flex flex-col justify-center items-center my-36 p-10">
                     <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
-                        <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-[#474f85] antialiased">
+                        <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-[#c67700] antialiased">
                             Register
                         </h4>
-                        <p className="mt-1 block font-bold text-base leading-relaxed text-[#474f85] antialiased">
+                        <p className="mt-1 block font-bold text-base leading-relaxed text-[#f9b248] antialiased">
                             Enter your details to register.
                         </p>
                         <form onSubmit={handleRegister} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
@@ -100,7 +101,7 @@ const Register = () => {
                                 </div>
                             </div>
                             <button
-                                className="mt-6 block w-full select-none rounded-lg bg-[#66bfbf] text-white py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                className="mt-6 block w-full select-none rounded-lg bg-[#c67700] text-white py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                                 type="submit"
                                 data-ripple-light="true"
                             >
@@ -121,6 +122,8 @@ const Register = () => {
                     </div>
                 </div>
             </div>
+
+            <Footer></Footer>
         </>
     );
 };

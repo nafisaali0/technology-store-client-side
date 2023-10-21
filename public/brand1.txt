@@ -4,40 +4,40 @@ samsung
     "id": 1,
     "productType": "Phone",
     "name": "Samsung Galaxy S22",
-    "brand": "Samsung",
+    "brand": "samsung",
     "price": 799.99,
     "rating": 4.5,
-    "image": "https://i.postimg.cc/SKTqdmZC/brand1a.webp",
+    "image": "https://i.postimg.cc/PrKQpBZR/phone3-removebg.png",
     "description": "The Samsung Galaxy S22 is a flagship smartphone with a 4.5-star rating."
   },
   {
     "id": 2,
     "productType": "Monitor",
     "name": "Samsung 27-inch 4K Monitor",
-    "brand": "Samsung",
+    "brand": "samsung",
     "price": 349.99,
     "rating": 4.2,
-    "image": "https://i.postimg.cc/XvzSFQJg/brand1b.webp",
+    "image": "https://i.postimg.cc/vTdY72R1/monitor1-removebg.png",
     "description": "The Samsung 27-inch 4K Monitor offers high-resolution display quality and has a 4.2-star rating."
   },
   {
     "id": 3,
     "productType": "Watch",
     "name": "Samsung Galaxy Watch 4",
-    "brand": "Samsung",
+    "brand": "samsung",
     "price": 249.99,
     "rating": 4.4,
-    "image": "https://i.postimg.cc/tRFwCXhk/brand1c.webp",
+    "image": "https://i.postimg.cc/85ksfPvF/w1-transformed.png",
     "description": "The Samsung Galaxy Watch 4 is a feature-rich smartwatch with a 4.4-star rating."
   },
   {
     "id": 4,
     "productType": "TWS",
     "name": "Samsung Galaxy Buds Pro",
-    "brand": "Samsung",
+    "brand": "samsung",
     "price": 149.99,
     "rating": 4.3,
-    "image": "https://i.postimg.cc/rFKhRM47/brand1d.webp",
+    "image": "https://i.postimg.cc/8PWf7bP9/pixcleaner-Result1.png",
     "description": "The Samsung Galaxy Buds Pro are premium true wireless earbuds with a 4.3-star rating."
   }
 ]

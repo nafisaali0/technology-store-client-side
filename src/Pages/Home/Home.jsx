@@ -1,22 +1,24 @@
 import Banner from './../Shared/Banner/Banner';
-// import CategoryCard from './../Shared/CategoryCard/CategoryCard';
 import AboutUs from './../Shared/AboutUs/AboutUs';
-import Contact from './../Shared/Contact/Contact';
 import Footer from './../Shared/Footer/Footer';
 import NavBar from './../Shared/NavBar/NavBar';
+import MapBrand from '../Shared/MapBrand/MapBrand';
+import SubHeader from '../Shared/SubHeader/SubHeader';
+import CountDown from '../Shared/CountDown/CountDown';
+
+
 
 const Home = () => {
 
     return (
         <div>
+            <SubHeader></SubHeader>
             <NavBar></NavBar>
             <Banner></Banner>
+            <MapBrand></MapBrand>
+            <CountDown></CountDown>
             <AboutUs></AboutUs>
-            <Contact></Contact>  
-            <Footer></Footer>          
-            {/* 
-            <CategoryCard></CategoryCard>          
-             */}
+            <Footer></Footer>
         </div>
     );
 };

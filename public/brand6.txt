@@ -3,40 +3,40 @@
     "id": 21,
     "productType": "Laptop",
     "name": "HP Spectre x360",
-    "brand": "HP",
+    "brand": "hp",
     "price": 1199.99,
     "rating": 4.4,
-    "image": "https://i.postimg.cc/85fc9Zny/brand6a.webp",
+    "image": "https://i.postimg.cc/d1czt4hn/brand5b-removebg-preview.png",
     "description": "The HP Spectre x360 is a premium 2-in-1 laptop with a 4.4-star rating."
   },
   {
     "id": 22,
     "productType": "Monitor",
     "name": "HP EliteDisplay E273d",
-    "brand": "HP",
+    "brand": "hp",
     "price": 299.99,
     "rating": 4.3,
-    "image": "https://i.postimg.cc/J0bn4G8Z/brand6b.jpg",
+    "image": "https://i.postimg.cc/D0TKtWwm/monitor-removebg.png",
     "description": "The HP EliteDisplay E273d is a high-quality monitor with a 4.3-star rating."
   },
   {
     "id": 23,
     "productType": "Printer",
     "name": "HP OfficeJet Pro 9025",
-    "brand": "HP",
+    "brand": "hp",
     "price": 249.99,
     "rating": 4.5,
-    "image": "https://i.postimg.cc/zDW3kPhv/brand6c.jpg",
+    "image": "https://i.postimg.cc/K8ypdQH5/brand6c-removebg-preview.png",
     "description": "The HP OfficeJet Pro 9025 is a versatile all-in-one printer with a 4.5-star rating."
   },
   {
     "id": 24,
     "productType": "Wireless Mouse",
     "name": "HP X3000 Wireless Mouse",
-    "brand": "HP",
+    "brand": "hp",
     "price": 19.99,
     "rating": 4.2,
-    "image": "https://i.postimg.cc/yNk83fBV/brand6d.jpg",
+    "image": "https://i.postimg.cc/vBG3NjgR/brand6d-removebg-preview.png",
     "description": "The HP X3000 Wireless Mouse is a reliable accessory with a 4.2-star rating."
   }
 ]

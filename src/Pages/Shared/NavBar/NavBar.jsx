@@ -27,11 +27,11 @@ const NavBar = () => {
 
     return (
         <>
-            <div className="drop-shadow-lg bg-gray-800">
+            <div className="drop-shadow-xl">
                 <div className="navbar container mx-auto ">
                     <div className="navbar-start">
                         <div className="dropdown">
-                            <label tabIndex={0} className="btn btn-ghost text-white lg:hidden">
+                            <label tabIndex={0} className="btn btn-ghost text-[#c67700] lg:hidden">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                             </label>
                             <nav className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>
@@ -40,10 +40,6 @@ const NavBar = () => {
                                     <NavLink to="/">Home</NavLink>
                                     <NavLink to="/addProduct">Add Product</NavLink>
                                     <NavLink to="/myCart">My Cart</NavLink>
-                                    {/* {
-                                    user ? <NavLink to="/recentevent">Recent Event</NavLink> : ''
-                                 } */}
-
                                 </ul>
                             </nav>
                         </div>
@@ -55,9 +51,6 @@ const NavBar = () => {
                                 <NavLink to="/">Home</NavLink>
                                 <NavLink to="/addProduct">Add Product</NavLink>
                                 <NavLink to="/myCart">My Cart</NavLink>
-                                {/* {
-                                user ? <NavLink to="/recentevent">Recent Event</NavLink> : ''
-                            } */}
                             </nav>
                         </ul>
                     </div>
@@ -80,7 +73,7 @@ const NavBar = () => {
                                 </div>
                                 :
                                 <Link to={'/login'}>
-                                    <button className="bg-[#66bfbf] text-white px-4 py-2 md:px-7 md:py-2 rounded-md font-bold">Login</button>
+                                    <button className="bg-[#c67700] text-white px-4 py-2 md:px-7 md:py-2 rounded-md font-bold">Login</button>
                                 </Link>
                         }
                     </div>

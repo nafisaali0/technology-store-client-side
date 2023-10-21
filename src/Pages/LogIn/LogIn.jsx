@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import NavBar from './../Shared/NavBar/NavBar';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
+import Footer from '../Shared/Footer/Footer';
 const LogIn = () => {
 
     const { logInUser, googleLogIn } = useContext(AuthContext)
@@ -81,7 +82,7 @@ const LogIn = () => {
                 {/* form */}
                 <div className="flex flex-col justify-center items-center my-24 p-10">
                     <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
-                        <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                        <h4 className="block font-sans text-2xl font-semibold leading-snug tracking-normal text-[#c67700] antialiased">
                             Log In
                         </h4>
                         <form onSubmit={handleLogIn} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
@@ -105,17 +106,17 @@ const LogIn = () => {
                                 </div>
                             </div>
                             <button
-                                className="mt-6 block w-full select-none rounded-lg bg-[#66bfbf] py-3 text-center align-middle font-sans text-lg font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                className="mt-6 block w-full select-none rounded-lg bg-[#c67700] py-3 text-center align-middle font-sans text-lg font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                                 type="submit"
                                 data-ripple-light="true"
                             >
                                 Log In
                             </button>
-                            <div className='flex justify-center items-center my-4 text-2xl text-[#474f85]'><p>OR</p></div>
+                            <div className='flex justify-center items-center my-4 text-2xl text-[#f9b248]'><p>OR</p></div>
                             <div className='flex justify-center items-center'>
                                 <button
                                     onClick={handleGoogle}
-                                    className="w-full py-3 border-2 border-[#66bfbf] text-black"
+                                    className="w-full py-3 border-2 border-[#c67700] text-black"
                                     type="submit"
                                     data-ripple-light="true"
                                 >
@@ -136,6 +137,7 @@ const LogIn = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </>
     );
 };
